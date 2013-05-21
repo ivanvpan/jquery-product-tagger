@@ -1,0 +1,73 @@
+.tagger-tag {
+    position: absolute;
+    font-family: arial;
+}
+
+.tagger-tag .hidden{
+    display: none;
+}
+
+.tagger-tag .tag {
+    color: #fff;
+    text-align: center;
+    width: 140px;
+}
+
+.tagger-tag .tag .text{
+    background: #000;
+    float: left;
+    height: 22px;
+    padding-top: 3px;
+    text-transform: uppercase;
+    width: 113px;
+}
+
+.tagger-tag .tag .plus-button{
+    background: #000;
+    float: right;
+    height: 23px;
+    padding-top: 2px;
+    width: 25px;
+}
+
+.tagger-tag .tag .expand:hover .plus-button{
+    background: #eb7e19;
+}
+.tagger-tag .tag .expand:link,
+.tagger-tag .tag .expand:visited,
+.tagger-tag .tag .expand:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.tagger-tag .info {
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    line-height: 14px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 180px;
+}
+
+.tagger-tag .info .title {
+    color: #eb7e19
+}
+
+.tagger-tag .info .text {
+    margin-bottom: 35px;
+}
+
+.tagger-tag .info .link {
+    font-size: 12px;
+    text-align: center;
+}
+
+.tagger-tag .info .link a,
+.tagger-tag .info .link a:link,
+.tagger-tag .info .link a:visited,
+.tagger-tag .info .link a:hover {
+    text-decoration: underline;
+    color: #eb7e19
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tag</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="lib/underscore.js"></script>
+    <script src="js/main.js"></script>
+    <script src="../tagger.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="../css/skin.css">
+
+    <style type="text/css">
+        .row {
+            margin-bottom: 20px;
+        }
+        #image-area {
+            position: relative;
+        }
+        #preview-area {
+            position: relative;
+        }
+        .tag-edit h3 {
+            margin-top: -8px;
+        }
+        .tag-edit form {
+            margin: 0;
+            margin-left: 30px;
+        }
+        #preview-button {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="padding-top: 20px;">
+    <script type="text/template" id="tag-template">
+        <div class="tag" style="padding: 0 2px; background-color: #800; color: white; position: absolute">
+            <div class="text">
+                <%= text %>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="tag-edit-template">
+        <div class="tag-edit well well-small">
+            <h3 class="pull-left"><%= index %></h3>
+            <a class="pull-right remove" href="#"><i class="icon-remove-sign"></i></a>
+            <form class="form">
+                <div class="controls">
+                    <input type="text" name="title" placeholder="Title"></textarea>
+                </div>
+                <div class="controls">
+                    <textarea name="text" placeholder="Description"></textarea>
+                </div>
+                <div>
+                    <input type="text" name="targetUrl" placeholder="Target URL"/>
+                </div>
+            </form>
+        </div>
+    </script>
+
+    <script type="text/template" id="output-template">    <div class="img-container" style="position:relative">
+        <img id="<%= imgId %>" src="<%= url %>"/>
+    </div>
+    <script type="text/javascript">
+        $('#<%= imgId %>').tagger(<%= data %>, {});
+    </script**>
+    </script>
+
+    <script type="text/template" id="image-template">
+        <img id="the-image" src="<%= url %>"/>
+    </script>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="span12">
+                <form class="form form-inline input-append" id="image-source">
+                    <input type="text" value="http://www.divfurniture.com/divfurniture_image/index-2.jpg"/>
+                    <button class="btn">Load</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span12">
+                <div id="image-area">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span9" id="tag-edit-forms">
+            </div>
+        </div>
+
+        <hr/>
+        <div class="row">
+            <div class="span12">
+                <button class="btn" id="preview-button">Preview</button>
+                <div id="preview-area">
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+        <div class="row">
+            <textarea id="output" style="height: 200px;" class="span12" disabled>
+            </textarea>
+        </div>
+    </div>
+</body>
+</html>
